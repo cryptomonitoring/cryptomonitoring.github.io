@@ -40,7 +40,7 @@ var chart = AmCharts.makeChart("kiri", {
   "type": "serial",
   "theme": "dark",
   "dataLoader": {
-    "url": "https://indodax.com/api/doge_idr/depth",
+    "url": "https://indodax.com/api/vex_idr/depth",
     "format": "json",
     "reload": 30,
     "postProcess": function(data) {
@@ -156,7 +156,7 @@ var chart = AmCharts.makeChart("kiri", {
     "title": "Volume (Billion)"
   }],
   "categoryAxis": {
-    "title": "Price (IDR/Doge)",
+    "title": "Price (IDR/VEX)",
     "minHorizontalGap": 100,
     "startOnAxis": true,
     "showFirstLabel": false,
@@ -216,7 +216,7 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("kanan", am4charts.XYChart);
 
 // Add data
-chart.dataSource.url = "https://indodax.com/api/doge_idr/trades";
+chart.dataSource.url = "https://indodax.com/api/vex_idr/trades";
 chart.dataSource.reloadFrequency = 30000;
 chart.dataSource.updateCurrentData = false;
 chart.dataSource.events.on("parseended", function(ev) {
